@@ -1,0 +1,30 @@
+.g-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    z-index: 200;
+    width: 350px;
+    height: 100%;
+    padding: 100px 40px;
+    background-color: snow;
+    background-image: radial-gradient(circle at 100% 150%, snow 24%, #fff 24%, #fff 28%, snow 28%, snow 36%, #fff 36%, #fff 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, snow 24%, #fff 24%, #fff 28%, snow 28%, snow 36%, #fff 36%, #fff 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, #fff 10%, snow 10%, snow 23%, #fff 23%, #fff 30%, snow 30%, snow 43%, #fff 43%, #fff 50%, snow 50%, snow 63%, #fff 63%, #fff 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, #fff 5%, snow 5%, snow 15%, #fff 15%, #fff 20%, snow 20%, snow 29%, #fff 29%, #fff 34%, snow 34%, snow 44%, #fff 44%, #fff 49%, transparent 49%, transparent), radial-gradient(circle at 0 50%, #fff 5%, snow 5%, snow 15%, #fff 15%, #fff 20%, snow 20%, snow 29%, #fff 29%, #fff 34%, snow 34%, snow 44%, #fff 44%, #fff 49%, transparent 49%, transparent);
+    background-size: 50px 25px;
+    &__list {
+        border-bottom: 2px solid #222;
+    }
+    &__item {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        border-top: 2px solid #222;
+        a {
+            display: block;
+            padding: 15px;
+            transition: .3s;
+            &:hover {
+                color: #587B34;
+            }
+        }
+    }
+}

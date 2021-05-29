@@ -1,0 +1,77 @@
+@media screen and (min-width: 769px) {
+    #wrapper {
+        background:url(../img/main_bg03.jpg) no-repeat center/cover;
+        background-attachment: fixed;
+    }
+    .fv {
+        &__bg {
+            position: relative;
+            padding: 140px 0 190px;
+            background:url(../img/fv_bg001@2x.png) no-repeat 50% 0/cover;
+            &:before {
+                position: absolute;
+                bottom: -30px;
+                left: 0;
+                width: 100vw;
+                height: 85px;
+                background: url(../img/fv_icon01@2x.png) repeat-x center;
+                content: "";
+            }
+        }
+        &__pic {
+            width: 400px;
+            margin: 0 auto;
+        }
+        &__item {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.8;
+            text-align: center;
+            letter-spacing: .04em;
+            &:nth-of-type(1) {
+                position: absolute;
+                top: 200px;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 354px;
+                height: 200px;
+                background:url(../img/fv_bg01.png) no-repeat center/contain;
+            }
+            &:nth-of-type(2) {
+                position: absolute;
+                top: -30px;
+                left: -20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 354px;
+                height: 200px;
+                background:url(../img/fv_bg01.png) no-repeat center/contain;
+            }
+        }
+        &__item02 {
+            &:nth-of-type(1) {
+                position: absolute;
+                top: -50px;
+                right: -150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 400px;
+                height: 140px;
+            }
+            &:nth-of-type(2) {
+                position: absolute;
+                top: 30px;
+                left: -80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 310px;
+                height: 130px;
+            }
+        }
+    }
+}

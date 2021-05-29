@@ -1,0 +1,46 @@
+
+@charset "utf-8";
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
+a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+table { border-collapse: collapse; border-spacing: 0; }
+/* =============================================================================
+  Basic style
+========================================================================== */
+body { -webkit-text-size-adjust: none; background: #fff; }
+#wrapper { position: relative; margin: 0 auto; overflow-x: hidden; background:#fff; }
+.inner { width: 1000px; margin: 0 auto; padding: 0; position:relative; }
+img { vertical-align: bottom; max-width :100%; width: 100%; max-width: 100%; }
+ul, li { list-style: none; font-size: 20px;}
+input[type="text"],input[type="button"],input[type="submit"] { -webkit-appearance: none; border-radius: 0; }
+button { background-color:white; border:none; padding: 0; }
+div,p,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,form,input,button,textarea,table,tr,th,td,article,aside,header,footer,section,nav,a{ box-sizing: border-box; }
+a { color: #222; text-decoration: none;}
+/* =============================================================================
+  Typography
+========================================================================== */
+body { color: #222; letter-spacing: 0; font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;}
+p { line-height: 1.7; letter-spacing: .04em; text-align: left; font-size: 18px;}
+li,dt, dd { line-height: 1.7; letter-spacing: .04em; font-size: 18px; }
+h1,h2,h3,h4,h5,h6 { font-weight:bold; line-height: 1.7; letter-spacing: .04em; }
+input[type="text"],input[type="button"],input[type="submit"] { -webkit-appearance: none; border-radius: 0; }
+/* =============================================================================
+  pc-style
+========================================================================== */
+@media screen and (min-width: 769px) {
+  .ds-sp { display: none; }
+  .br-sp { display: none; }
+  img {width: 100%; max-width: 100%; }
+}
+/* =============================================================================
+  sp-style
+========================================================================== */
+@media screen and (max-width: 768px) {
+  html { font-size: 13.333333333vw; }
+  body { font-size: .3rem; }
+  .inner { margin: 0 .3rem; width: auto; }
+  .ds-pc { display: none; }
+  .br-pc { display: none; }
+  img { width: 100%; }
+}
