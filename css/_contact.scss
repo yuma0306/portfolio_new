@@ -22,7 +22,7 @@
                 text-align: center!important;
             }
             .mfp_err {
-                display: none!important;
+                display: none;
                 text-align: left!important;
                 margin: 5px 0px 0px 0px!important;
                 padding: 3px 0px 5px 17px!important;
@@ -62,11 +62,15 @@
                 height: 300px!important;
             }
             .mfp_buttons {
-                width: 300px!important;
                 margin: 40px auto 0!important;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row-reverse;
                 button {
+                    width: 300px!important;
+                    margin: auto;
                     display: block!important;
-                    width: 100%!important;
                     position: relative!important;
                     padding: 15px 0!important;
                     border: 2px solid #111!important;
@@ -94,32 +98,84 @@
                     &:hover {
                         cursor: pointer!important;
                         color: #fff!important;
-                        border: 3px solid #587B34!important;
+                        border: 2px solid #587B34!important;
                         &::before {
                             transform: translateY(0)!important;
                         }
                     }
                 }
+                #mfp_button_cancel {
+                    color: #B3655D!important;
+                    &::before {
+                        background: #B3655D!important;
+                    }
+                    &:hover {
+                        color: #fff!important;
+                        border: 2px solid #B3655D!important;
+                    }
+                }
             }
-            div#mfp_overlay {
-                position: absolute!important;
-                display: none!important;
-                z-index: 10001!important;
+            // div#mfp_overlay {
+            //     position: absolute!important;
+            //     display: none;
+            //     z-index: 10001;
+            // }
+            // div#mfp_overlay_inner {
+            //     background-color: #FFF!important;
+            //     padding: 15px!important;
+            //     margin: 0px auto!important;
+            //     border-radius: 5px!important;
+            //     box-shadow: 0px 0px 10px #000!important;
+            //     width: 640px!important;
+            //     max-width: 90%!important;
+            // }
+            // div#mfp_overlay_background {
+            //     background-color: #000;
+            //     position: absolute;
+            //     display: none;
+            //     z-index: 10000;
+            // }
+            // div#mfp_loading {
+            //     z-index: 20001;
+            //     position: absolute;
+            //     display: none;
+            //     width: 40px;
+            //     height: 40px;
+            //     background-image: url(_images/mfp_loading.gif);
+            // }
+            // div#mfp_loading_screen {
+            //     z-index: 20000;
+            //     opacity: 0.8;
+            //     display: none;
+            //     background-color: #000;
+            //     position: absolute;
+            // }
+            h4 {
+                margin: 0 0 10px;
+                color: #587B34;
+                font-size: 25px;
+                font-weight: bold;
+                text-align: center;
+                letter-spacing: .04em;
             }
-            div#mfp_overlay_inner {
-                background-color: #FFF!important;
-                padding: 15px!important;
-                margin: 0px auto!important;
-                border-radius: 5px!important;
-                box-shadow: 0px 0px 10px #000!important;
-                width: 640px!important;
-                max-width: 90%!important;
+            tr {
+                border-bottom: 1px solid;
             }
-            div#mfp_overlay_background {
-                background-color: #000!important;
-                position: absolute!important;
-                display: none!important;
-                z-index: 10000!important;
+            th {
+                width: 350px;
+                padding: 20px 0;
+                font-size: 20px;
+                text-align: center;
+                vertical-align: middle;
+                letter-spacing: .04em;
+            }
+            td {
+                width: 350px;
+                padding: 20px 0;
+                font-size: 20px;
+                text-align: center;
+                vertical-align: middle;
+                letter-spacing: .04em;
             }
     }
 }

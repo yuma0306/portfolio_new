@@ -2,7 +2,7 @@ $config{'about'} = 'Mailform Pro 4.3.0';
 
 ## 確認画面のタイプ
 ## 0: オーバーレイ / 1:フラット / 2: システムダイアログ / 3:確認なし
-$config{'ConfirmationMode'} = 0;
+$config{'ConfirmationMode'} = 1;
 
 ## sendmailのパス
 #$config{'sendmail'} = 'C:\sendmail\sendmail.exe';

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=320,initial-scale=1.0,user-scalable=no">
 <title>Mailform Pro</title>
 <!--メールフォームプロ用CSS-->
-<link rel="stylesheet" href="mfp.statics/mailformpro.css" type="text/css">
+<!-- <link rel="stylesheet" href="mfp.statics/mailformpro.css" type="text/css"> -->
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/style.css">
 <!--/メールフォームプロ用CSS-->
@@ -15,11 +15,11 @@
 		<div id="wrapper" class="contact">
             <div class="contact__bg">
                 <div id="container" class="inner">
-                    <!-- <script type="text/javascript" src="examples/example.js"></script> -->
+        <!-- <script type="text/javascript" src="examples/example.js"></script> -->
         <!--メールフォームプロ-->
+        <form id="mailformpro" action="mailformpro/mailformpro.cgi" method="POST">
         <p class="contact__lead">contact</p>
         <h1 class="contact__ttl">お問い合わせ</h1>
-        <form id="mailformpro" action="mailformpro/mailformpro.cgi" method="POST">
         <dl class="mailform">
             <input type="hidden" name="お名前" data-unjoin="姓+ +名+（+セイ+ +メイ+）" value="">
             <dt class="mfp contact__term"><span class="must">必須</span>お名前</dt>
@@ -61,7 +61,7 @@
             <dt class="mfp contact__term"><span class="must">必須</span>郵便番号</dt>
             <dd class="mfp contact__desc">
                 <input type="hidden" name="ご住所" data-unjoin="〒+郵便番号+\n+都道府県+市区町村+丁目番地" value="">
-                <input class="contact__full" type="text" name="郵便番号" size="30" required="required" data-address="都道府県,市区町村,市区町村" autocomplete="off">
+                <input class="contact__full" type="text" name="郵便番号" size="30" required="required" data-address="都道府県,市区町村,市区町村" data-max="7" data-min="7" data-error-text="数字7文字で入力してください">
             </dd>
             <dt class="mfp contact__term"><span class="must">必須</span>ご住所</dt>
             <dd class="mfp contact__desc">
@@ -143,12 +143,12 @@
                 <textarea class="contact__full" name="備考欄" rows="60" cols="60"></textarea>
             </dd>
 
-            <dt class="mfp contact__term"><span class="must">必須</span>送信確認</dt>
+            <!-- <dt class="mfp contact__term"><span class="must">必須</span>送信確認</dt>
             <dd class="mfp contact__desc">
                 <label>
                     <input type="checkbox" required="required" data-exc="1" name="送信確認" value="送信チェック済み"> 上記送信内容を確認したらチェックを入れてください
                 </label>
-            </dd>
+            </dd> -->
         </dl>
         <div class="mfp_buttons">
             <button type="submit">確認画面へ</button>
@@ -161,3 +161,36 @@
 		</div>
 	</body>
 </html>
+
+
+
+
+<!-- <div id="mfp_phase_confirm" style="display: block;">
+    <div id="mfp_phase_confirm_inner">
+        <h4>入力内容をご確認ください</h4>
+        <table id="mfp_confirm_table">
+            <tbody>
+                <tr class="mfp_achroma">
+                    <th id="th_mfp_element_0">お名前</th>
+                    <td id="td_mfp_element_0">,aaa aaa（ ）</td>
+                </tr>
+                <tr class="mfp_colored">
+                    <th id="th_mfp_element_5">メールアドレス</th>
+                    <td id="td_mfp_element_5">yuma.hori@postscape.jp</td>
+                </tr>
+                <tr class="mfp_achroma">
+                    <th id="th_mfp_element_7">ご住所</th>
+                    <td id="td_mfp_element_7">〒aaa<br>北海道aaaaaa</td>
+                </tr>
+                <tr class="mfp_colored">
+                    <th id="th_mfp_element_15">送信確認</th>
+                    <td id="td_mfp_element_15">送信チェック済み</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mfp_buttons">
+            <button id="mfp_button_send" class="mfp_element_button" onclick="mfp.sendmail()">送信する</button>
+            <button id="mfp_button_cancel" class="mfp_element_button" onclick="mfp.cancel()">キャンセル</button>
+        </div>
+    </div>
+</div> -->
