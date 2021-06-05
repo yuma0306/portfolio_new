@@ -10,20 +10,21 @@ html(lang="ja")
         link(rel="stylesheet", href="css/style.css")
 
     body
-        //- #splash
-        //-     #splash-logo Loading...
-        //- .splashbg1
-        //- .splashbg2
+        #splash
+            #splash-logo Loading...
+        .splashbg1
+        .splashbg2
         #wrapper
             header.header
                 .header__bg
                     h1.header__logo web制作
-                    .header__menu#js-header-menu
-                        span
-                        span
-                        span
-                    .header__btn
-                        a(href="#") お問い合わせ
+                    .header__block
+                        .header__menu#js-header-menu
+                            span
+                            span
+                            span
+                        .header__btn
+                            a(href="#") お問い合わせ
                 nav.g-nav#js-menu
                     ul.g-nav__list
                         li.g-nav__item
@@ -40,8 +41,8 @@ html(lang="ja")
                     .inner
                         .fv__pic: img(src="img/fvのカエル@2x.png")
                         ul.fv__list
-                            li.fv__item WordPress化・SEO対策<br>解析タグの設置も対応可！
-                            li.fv__item デザインからコーディング、<br>改修まで幅広く承ります。
+                            li.fv__item.right-to-left WordPress化・SEO対策<br>解析タグの設置も対応可！
+                            li.fv__item.left-to-right デザインからコーディング、<br>改修まで幅広く承ります。
 
             section.service#service
                 .service__bg
@@ -49,49 +50,50 @@ html(lang="ja")
                         p.service__lead service
                         h2.service__ttl サービス
                         p.service__txt01 WEB制作会社出身の現役エンジニアが、デザインからコーディング、Webサイトの解析サポートまで一貫してお手伝いさせて頂きます。既存LP/HPの改修、コーディングのみなどのご対応も可能です。お気軽にお問い合わせください。
-                    ul.service__tab-list
-                        li.service__tab-item.active(data-num="1")
-                            p.service__tab-txt WEBデザイン
-                        li.service__tab-item(data-num="2")
-                            p.service__tab-txt コーディング
-                        li.service__tab-item(data-num="3")
-                            p.service__tab-txt 保守・解析サポート
-                    ul.service__list
-                        li.service__item.active
-                            .service__item-inner
-                                .service__block01
-                                    .service__pic
-                                        img(src="img/service_img01.png", alt="")
-                                .service__block02
-                                    h3.service__define WEBデザインの作成
-                                    ul.service__list02
-                                        li.service__item02 ・掲載内容の整理
-                                        li.service__item02 ・デザインの作成
-                                    p.service__txt02 事前に打ち合わせを実施させて頂き、訴求する商品の分析、訴求するポイントを整理の上、デザインカンプを作成致します。
-                        li.service__item
-                            .service__item-inner
-                                .service__block01
-                                    .service__pic
-                                        img(src="img/service_img02.png", alt="")
-                                .service__block02
-                                    h3.service__define コーディング
-                                    ul.service__list02
-                                        li.service__item02 ・SEOを考慮したコーディング
-                                        li.service__item02 ・完全なレスポンシブ対応
-                                        li.service__item02 ・既存サイトの改修対応
-                                    p.service__txt02 SEOを考慮した、PC/SP/タブレットそれぞれにレスポンシブ対応したコーディングをさせて頂きます。WordPress化についても対応可能です。PCやSPのみでの制作、納期についてもお気軽にご相談ください。
-                        li.service__item
-                            .service__item-inner
-                                .service__block01
-                                    .service__pic
-                                        img(src="img/service_img03.png", alt="")
-                                .service__block02
-                                    h3.service__define 保守・解析サポート
-                                    ul.service__list02
-                                        li.service__item02 ・解析タグの設置
-                                        li.service__item02 ・解析開始までをサポート
-                                        li.service__item02 ・保守対応（別途費用）
-                                    p.service__txt02  Googleアナリティクスやgoogleタグマネジャーなどの運用開始までのサポートを致します。また各種設定についてもサポートさせて頂きます。  また作成したサイトの保守、改修対応についても対応させて頂きます。<br>※改修・保守については別途見積もりとなります。
+                    .service__wrap.down-to-top
+                        ul.service__tab-list
+                            li.service__tab-item.active(data-num="1")
+                                p.service__tab-txt WEBデザイン
+                            li.service__tab-item(data-num="2")
+                                p.service__tab-txt コーディング
+                            li.service__tab-item(data-num="3")
+                                p.service__tab-txt 保守・解析サポート
+                        ul.service__list
+                            li.service__item.active
+                                .service__item-inner
+                                    .service__block01
+                                        .service__pic
+                                            img(src="img/service_img01.png", alt="")
+                                    .service__block02
+                                        h3.service__define WEBデザインの作成
+                                        ul.service__list02
+                                            li.service__item02 ・掲載内容の整理
+                                            li.service__item02 ・デザインの作成
+                                        p.service__txt02 事前に打ち合わせを実施させて頂き、訴求する商品の分析、訴求するポイントを整理の上、デザインカンプを作成致します。
+                            li.service__item
+                                .service__item-inner
+                                    .service__block01
+                                        .service__pic
+                                            img(src="img/service_img02.png", alt="")
+                                    .service__block02
+                                        h3.service__define コーディング
+                                        ul.service__list02
+                                            li.service__item02 ・SEOを考慮したコーディング
+                                            li.service__item02 ・完全なレスポンシブ対応
+                                            li.service__item02 ・既存サイトの改修対応
+                                        p.service__txt02 SEOを考慮した、PC/SP/タブレットそれぞれにレスポンシブ対応したコーディングをさせて頂きます。WordPress化についても対応可能です。PCやSPのみでの制作、納期についてもお気軽にご相談ください。
+                            li.service__item
+                                .service__item-inner
+                                    .service__block01
+                                        .service__pic
+                                            img(src="img/service_img03.png", alt="")
+                                    .service__block02
+                                        h3.service__define 保守・解析サポート
+                                        ul.service__list02
+                                            li.service__item02 ・解析タグの設置
+                                            li.service__item02 ・解析開始までをサポート
+                                            li.service__item02 ・保守対応（別途費用）
+                                        p.service__txt02  Googleアナリティクスやgoogleタグマネジャーなどの運用開始までのサポートを致します。また各種設定についてもサポートさせて頂きます。  また作成したサイトの保守、改修対応についても対応させて頂きます。<br>※改修・保守については別途見積もりとなります。
             section.case
                 .case__bg
                     .inner
@@ -101,18 +103,18 @@ html(lang="ja")
                             .case__pic
                                 img(src="img/case_img01.png", alt="")
                             ul.case__list
-                                li.case__item
+                                li.case__item.right-to-left
                                     p.case__txt 予算が限られている
-                                li.case__item
+                                li.case__item.left-to-right
                                     p.case__txt リリースまで時間がない
-                                li.case__item
+                                li.case__item.right-to-left
                                     p.case__txt ホームページの知識がない
-                                li.case__item
+                                li.case__item.left-to-right
                                     p.case__txt ドメインの取得なども<br>サポートして欲しい
 
             section.solution
                 .solution__bg
-                    .inner
+                    .inner.down-to-top
                         h2.solution__ttl そのお悩み<span class="deco">解決</span>いたします。
                         p.solution__txt フリーランスだから、制作会社と比べて予算も安く、レスポンスも早い。<br>お客様一人一人に手厚くサポートいたします。まずはお気軽にご相談ください。
                         .solution__btn
@@ -120,7 +122,7 @@ html(lang="ja")
 
             section.works#works
                 .works__bg
-                    .inner
+                    .inner.left-to-right
                         h2.works__ttl <span class="deco">WORKS</span>制作実績
                         .swiper-container.works__block
                             .swiper-wrapper
@@ -147,9 +149,10 @@ html(lang="ja")
                         .swiper-button-prev.works__btn01
                         .swiper-button-next.works__btn02
                         p.works__note ※他にも社内業務等で対応させて頂いた案件は複数ございますが、守秘義務の観点から非公開としております。
+
             section.price#price
                 .price__bg
-                    .inner
+                    .inner.right-to-left
                         p.price__lead PRICE
                         h2.price__ttl 料金
                         p.price__txt01 デザインからコーディング、解析タグの設置まで一貫して下記の価格で対応いたします。<br>下記以外にも様々な作り方で対応可能です。まずはお気軽にご相談ください。

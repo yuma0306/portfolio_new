@@ -1,21 +1,35 @@
 $(window).on('load',function(){
-    $("#splash-logo").delay(1000).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
-
-    //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-    $("#splash").delay(1000).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
-
-    $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
-
+    $("#splash-logo").delay(1000).fadeOut('slow');
+    $("#splash").delay(1000).fadeOut('slow',function(){
+    $('body').addClass('appear');
     });
-    //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-
-    //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
+    //ここまでローディングエリア
+    //背景が伸びた後
     $('.splashbg1').on('animationend', function() {
-    //この中に動かしたいJSを記載
+        $('.fv__item.left-to-right').addClass('scrollin');
+        $('.fv__item.right-to-left').addClass('scrollin');
     });
-    //=====ここまで背景が伸びた後に動かしたいJSをまとめる
 });
 
+    $('a[href^="#"]').click(function(e) {
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top + 5;
+        $.when(
+          $("html, body").animate({
+            scrollTop: position
+          }, 400, "swing"),
+          e.preventDefault(),
+        ).done(function() {
+          var diff = target.offset().top + 5;
+          if (diff === position) {
+          } else {
+            $("html, body").animate({
+              scrollTop: diff
+            }, 10, "swing");
+          }
+        });
+      });
 
 // swiper
 var mySwiper = new Swiper('.swiper-container', {
@@ -57,42 +71,19 @@ function serviceTab() {
 }
 serviceTab();
 
-//scroll
-// $(function() {
-//   $('a[href^="#"]').click(function(e) {
-//     var href = $(this).attr("href");
-//     var target = $(href == "#" || href == "" ? 'html' : href);
-//     var position = target.offset().top;
-//       $.when(
-//         $("html, body").animate({
-//           scrollTop: position
-//         }, 400, "swing"),
-//         e.preventDefault()
-//       ).done(function() {
-//         var diff = target.offset().top;
-//         if (diff === position) {
-//         } else {
-//           $("html, body").animate({
-//             scrollTop: diff
-//           }, 10, "swing");
-//         }
-//       });
-//   });
-// });
-
 // burgerLock
-var open_position;
-function burgerLock(){
-  var $wrapper = $('#wrapper');
-  var burgerOpen = $('#js-header-menu').hasClass('active');
-  if(burgerOpen) {
-      open_position = $(window).scrollTop();
-      $wrapper.css({'width':'100%', 'position':'fixed', 'top': -(open_position)});
-  } else {
-      $wrapper.attr('style','');
-      $(window).scrollTop(open_position);
-  }
-}
+// function burgerLock(){
+//   var open_position;
+//   var $wrapper = $('#wrapper');
+//   var burgerOpen = $('#js-header-menu').hasClass('active');
+//   if(burgerOpen) {
+//       open_position = $(window).scrollTop();
+//       $wrapper.css({'width':'100%', 'position':'fixed', 'top': -(open_position)});
+//   } else {
+//       $wrapper.attr('style','');
+//       $(window).scrollTop(open_position);
+//   }
+// }
 
 //burger
 $(function() {
@@ -101,15 +92,15 @@ $(function() {
   var $jsMask = $('#js-mask');
   $($burger).click(function() {
     $(this).toggleClass('active');
+    // burgerLock();
     $($menu).slideToggle();
     $($jsMask).fadeToggle();
-    burgerLock();
   });
   $('#js-mask, .g-nav__item').click(function() {
     $($burger).removeClass('active');
+    // burgerLock();
     $($menu).slideUp();
     $($jsMask).fadeOut();
-    burgerLock();
   });
 });
 
@@ -128,33 +119,33 @@ $(function(){
 });
 
 //js-switch
-$(function () {
-  var $setElem = $(".js-switch");
-  var pc = "pc";
-  var sp = "sp";
-  var replaceWidth = 767;
-  $setElem.each(function () {
-    var $this = $(this);
-    function imgSize() {
-      if (window.innerWidth > replaceWidth) {
-        if ($this[0].tagName == "IMG") {
-          $this.attr("src", $this.attr("src").replace(sp, pc));
-        }
-      } else {
-        if ($this[0].tagName == "IMG") {
-          $this.attr("src", $this.attr("src").replace(pc, sp));
-        }
-      }
-  }
-  var resizeTimer;
-  $(window).on('load resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () {
-        imgSize();
-      }, 200);
-    });
-  });
-});
+// $(function () {
+//   var $setElem = $(".js-switch");
+//   var pc = "pc";
+//   var sp = "sp";
+//   var replaceWidth = 767;
+//   $setElem.each(function () {
+//     var $this = $(this);
+//     function imgSize() {
+//       if (window.innerWidth > replaceWidth) {
+//         if ($this[0].tagName == "IMG") {
+//           $this.attr("src", $this.attr("src").replace(sp, pc));
+//         }
+//       } else {
+//         if ($this[0].tagName == "IMG") {
+//           $this.attr("src", $this.attr("src").replace(pc, sp));
+//         }
+//       }
+//   }
+//   var resizeTimer;
+//   $(window).on('load resize', function () {
+//       clearTimeout(resizeTimer);
+//       resizeTimer = setTimeout(function () {
+//         imgSize();
+//       }, 200);
+//     });
+//   });
+// });
 
 //ipad対応
 function deviceJudgment() {
@@ -166,15 +157,3 @@ function deviceJudgment() {
   }
 }
 deviceJudgment();
-
-
-$(function(){
-    $('a[href^="#"]').click(function(){
-      let speed = 500;
-      let href= $(this).attr("href");
-      let target = $(href == "#" || href == "" ? 'html' : href);
-      let position = target.offset().top;
-      $("html, body").animate({scrollTop:position}, speed, "swing");
-        return false;
-    });
-  });

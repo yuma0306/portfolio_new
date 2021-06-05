@@ -21,8 +21,8 @@ a { color: #222; text-decoration: none;}
   Typography
 ========================================================================== */
 body { color: #222; letter-spacing: 0; font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;}
-p { line-height: 1.7; letter-spacing: .04em; text-align: left; font-size: 18px;}
-li,dt, dd { line-height: 1.7; letter-spacing: .04em; font-size: 18px; }
+p { line-height: 1.7; letter-spacing: .04em; text-align: left;}
+li,dt, dd { line-height: 1.7; letter-spacing: .04em; }
 h1,h2,h3,h4,h5,h6 { font-weight:bold; line-height: 1.7; letter-spacing: .04em; }
 input[type="text"],input[type="button"],input[type="submit"] { -webkit-appearance: none; border-radius: 0; }
 /* =============================================================================
@@ -32,6 +32,8 @@ input[type="text"],input[type="button"],input[type="submit"] { -webkit-appearanc
   .ds-sp { display: none; }
   .br-sp { display: none; }
   img {width: 100%; max-width: 100%; }
+  p { font-size: 18px;}
+li,dt, dd { font-size: 18px; }
 }
 /* =============================================================================
   sp-style

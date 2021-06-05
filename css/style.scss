@@ -126,8 +126,34 @@ body.appear #wrapper{
 }
 }
 
-
-
+/*---------------フェードインアニメ---------------*/
+.left-to-right {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 1s;
+  }
+  .left-to-right.scrollin {
+    opacity: 1;
+    transform: translate(0);
+  }
+  .right-to-left {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: all 1s;
+  }
+  .right-to-left.scrollin {
+    opacity: 1;
+    transform: translate(0);
+  }
+  .down-to-top {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s;
+  }
+  .down-to-top.scrollin {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 @import "header";
 @import "fv";
@@ -138,3 +164,4 @@ body.appear #wrapper{
 @import "price";
 @import "footer";
 @import "nav";
+// @import "contact";

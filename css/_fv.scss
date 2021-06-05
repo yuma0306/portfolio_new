@@ -75,3 +75,82 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    #wrapper {
+        background:url(../img/main_bg03.jpg) no-repeat center/cover;
+        background-attachment: fixed;
+    }
+    .fv {
+        &__bg {
+            position: relative;
+            padding: 4rem 0 4.2rem;
+            background:url(../img/fv_bg001@2x.png) no-repeat 50% 0/cover;
+            &:before {
+                position: absolute;
+                bottom: -.3rem;
+                left: 0;
+                width: 100vw;
+                height: .85rem;
+                background: url(../img/fv_icon01@2x.png) repeat-x center;
+                background-size: contain;
+                content: "";
+            }
+        }
+        &__pic {
+            width: 5rem;
+            margin: 0 auto;
+        }
+        &__item {
+            font-weight: 500;
+            line-height: 1.8;
+            text-align: center;
+            letter-spacing: .04em;
+            font-size: .3rem;
+            &:nth-of-type(1) {
+                position: absolute;
+                top: 4.2rem;
+                right: -.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 5rem;
+                height: 3rem;
+                background:url(../img/fv_bg01.png) no-repeat center/contain;
+            }
+            &:nth-of-type(2) {
+                position: absolute;
+                top: -3.2rem;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 5rem;
+                height: 3rem;
+                background:url(../img/fv_bg01.png) no-repeat center/contain;
+            }
+        }
+        &__item02 {
+            &:nth-of-type(1) {
+                position: absolute;
+                top: -.5rem;
+                right: -1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 4rem;
+                height: 1.4rem;
+            }
+            &:nth-of-type(2) {
+                position: absolute;
+                top: .3rem;
+                left: -.8rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 3.1rem;
+                height: 1.3rem;
+            }
+        }
+    }
+}
